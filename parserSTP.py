@@ -16,7 +16,7 @@ def parseSTPFile(stpFilePath):
 		Returns
 		-------
 
-		instance : (list(str), nx.DiGraph)
+		instance : (list(int), nx.DiGraph)
 			Parsed instance converted into the a pair containing the following elements:
 			- the first element is a list of terminal nodes (each denoted by a string id)
 			- the second element is a networkx Digraph structure containing the graph
@@ -75,4 +75,4 @@ def parseSTPFile(stpFilePath):
 
 		line = file.readline()
 
-parseSTPFile("./testfiles/b01.stp")	
+	return terminals, graph
