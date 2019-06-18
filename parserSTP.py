@@ -62,7 +62,8 @@ def parseSTPFile(stpFilePath):
 				n1 = int(dat[0])
 				n2 = int(dat[1])
 				w = int(dat[2])
-				graph.add_edge(n1, n2, weight=w)				
+				graph.add_edge(n1, n2, weight=w)
+				graph.add_edge(n2, n1, weight=w)
 
 		elif currentSection == "Terminals":
 			if line.startswith("Terminals "):
@@ -72,6 +73,7 @@ def parseSTPFile(stpFilePath):
 			elif line.startswith("T "):
 				terminalNr = int(line[len("T "):-1])
 				terminals.append(terminalNr)
+				graph.node[terminalNr]['color']="red"
 
 		line = file.readline()
 
