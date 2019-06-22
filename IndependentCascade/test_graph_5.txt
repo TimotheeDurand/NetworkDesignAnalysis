@@ -1,0 +1,10 @@
+# Directed graph (each unordered pair of nodes is saved once): Wiki-Vote.txt 
+# Wikipedia voting on promotion to administratorship (till January 2008). Directed edge A->B means user A voted on B becoming Wikipedia administrator.
+# Nodes: 5 Edges: 17
+# FromNodeId	ToNodeId
+1	2
+1	3
+2	3
+3	4
+3	1
+5	4
