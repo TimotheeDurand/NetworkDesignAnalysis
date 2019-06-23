@@ -3,6 +3,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import random
+from reachable import reachable_nodes
 
 def greedy(k,p,chi_size,G,nodes,edges):
 
@@ -42,19 +43,26 @@ def greedy(k,p,chi_size,G,nodes,edges):
         sigmas = {}
         mySum = []
         for X in chi:
+            
+            print(A)
+            
             GX.add_edges_from(X)
             
             R = set()
+            R_forall_nodes = []
+            
+            
+            for i in nodes:
+                R_iX = reachable_nodes(GX,i)
+                R_forall_nodes.append(R_iX)
+            
             for i in A:
-                R_iX = nx.algorithms.dag.descendants(GX,i)
-                R.update(R_iX)
+                R.update(R_forall_nodes[i-1])
                 
             for v in nodes:
                 if v not in A:
                     
-                    R_vX = nx.algorithms.dag.descendants(GX,v)
-                    R.update(R_vX)
-                    
+                    R.update(R_forall_nodes[v-1])
                     
                     sigma_X = len(R)
                     mySum.append(sigma_X)

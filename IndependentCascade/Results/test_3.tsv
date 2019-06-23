@@ -1,0 +1,17 @@
+Method	A	Runtime	k	Test
+greedy	{100}	2.306809	1	1
+random	{33}	0.000018	1	1
+out-degree	{52}	0.000064	1	2
+closeness centrality	{81}	0.022260	1	1
+greedy	{99, 100}	4.654473	2	3
+random	{74, 38}	0.000018	2	2
+out-degree	{52, 39}	0.000076	2	5
+closeness centrality	{81, 2}	0.021509	2	2
+greedy	{98, 99, 100}	6.511488	3	3
+random	{34, 59, 94}	0.000021	3	5
+out-degree	{52, 5, 39}	0.000108	3	5
+closeness centrality	{81, 2, 27}	0.032310	3	5
+greedy	{97, 98, 99, 100}	8.743280	4	9
+random	{72, 90, 3, 30}	0.000020	4	4
+out-degree	{82, 52, 5, 39}	0.000102	4	5
+closeness centrality	{81, 2, 27, 70}	0.022058	4	4
