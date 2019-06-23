@@ -18,16 +18,20 @@ G, nodes, edges = myparser('Wiki-Vote.txt')
 
 
 
-for k in [5,10,15]:
+for k in [5]:
         
-    for method in ['greedy','random', 'out-degree','closeness centrality']:
     
-        print('k=%d' %k)
-        
+    
+    for method in ['greedy','random', 'out-degree','closeness centrality']:
+
+        print(str(k))
         start = time.time()
         if method == 'greedy':
+           
             A = greedy(k,p,50, G,nodes,edges)
+
             
+
  
 
         if method == 'random':
@@ -48,8 +52,6 @@ for k in [5,10,15]:
         nodes_reached, GX= cascade(G,A,p)
        
         
-
-
         out_file.write('%s\t%s\t%f\t%d\t%d\n' %(method, str(A), end - start, k, nodes_reached))
 
 

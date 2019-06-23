@@ -7,10 +7,10 @@ Created on Sat Jun 22 18:49:18 2019
 """
 import networkx as nx
 
-def reachable_nodes(GX,v):
+def reachable_nodes(G,v):
     R_vX = set()
-    for i in list(GX):
-        if nx.has_path(GX,v,i):
+    for i in list(G):
+        if (nx.has_path(G,v,i)) and (v != i):
             R_vX.add(i)
             
     return R_vX
