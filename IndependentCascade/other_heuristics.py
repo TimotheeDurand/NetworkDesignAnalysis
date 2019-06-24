@@ -7,7 +7,6 @@ Created on Thu Jun 20 20:47:43 2019
 """
 
 import networkx as nx
-import matplotlib.pyplot as plt
 import random
 import time
 

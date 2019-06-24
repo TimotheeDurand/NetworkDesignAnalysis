@@ -3,7 +3,6 @@ from parse_snap import myparser
 from cascade import cascade
 import random
 from other_heuristics import out_degree, centrality
-import matplotlib.pyplot as plt
 import networkx as nx
 
 import time

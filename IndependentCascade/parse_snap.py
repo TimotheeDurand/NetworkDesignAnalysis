@@ -1,7 +1,6 @@
 #parse file
 
 import networkx as nx
-import matplotlib.pyplot as plt
 
 def myparser(file_path):
     data = open(file_path, 'r')
