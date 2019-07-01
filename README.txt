@@ -29,6 +29,16 @@ DUAL ASCENT
 The implementation of the Dual Ascent can be found in the "DualAscent" Folder:
 To test out the algorithm, the following command has to be run:
 
-python3 main.py
+python3 mainDualAscent.py
+
+or
+
+python3 mainDualAscent.py -f ./testfiles/b01.stp
 
 By default it will run the algorithm on the './testfiles/B18.stp' file. A lot of different instances can be tested, and they are stored in the 'testfiles' folder. All of them are retrieved from the SteilLib website (http://steinlib.zib.de/). The file 'instancesinfo.csv' contains information about instances such as their size, their complexity and the expected optimal value.
+
+Parameters:
+-f [str] : stp filename
+-h [str] : TerminalChoice heuristic {"FullEval" or "LazyEval"}
+-d [str] : Output dot file 
+-h       : print this help message
