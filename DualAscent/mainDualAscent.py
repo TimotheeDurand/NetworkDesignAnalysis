@@ -44,6 +44,7 @@ print("Cost of the solution: {}".format(sumEdges))
 print("Selected edges: \n{}".format(selectedEdges))
 print("time for dual ascent: {:10.4f}s".format(timeDualAscent))
 print("time for shortest path heuristic: {:10.4f}s".format(timeShortestPath))
+print("totalTime: {:10.4f}s".format(timeDualAscent+timeShortestPath))
 
 
 if dotfile != None:
